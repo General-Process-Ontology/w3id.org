@@ -8,9 +8,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Test if htaccess files in current directory does multiple wanted redirects
-      uses: madewithlove/htaccess-cli-github-action@multiple
-      with:
+    - name: Test if htaccess files in a working directory is valid
+      uses: madewithlove/htaccess-cli-github-actions@main
+      with: 
         url: https://w3id.org/gpo/GPO_01cd2578_8730_4ac9_a555_9112728ea939
         expected-url: https://onto-wiki.eu/wiki/Special:AskResolver?iri=https://w3id.org/gpo/GPO_01cd2578_8730_4ac9_a555_9112728ea939
-        path: ./gpo/
+        working-directory: ./gpo
